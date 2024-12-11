@@ -1,0 +1,301 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/Paintlyfy/assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Poppins", serif;
+}
+
+/* Header styles */
+header {
+    margin-top: 10px;
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    align-content: start;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 47px;
+    height: auto;
+}
+
+header .navi {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+header .navi a {
+    text-decoration: none;
+    color: #000;
+}
+
+header .menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 21px;
+}
+
+header .menu i {
+    font-size: 30px;
+}
+
+/* Main content styles */
+main .swiper {
+    width: 100%;
+    height: 600px;
+}
+
+main .swiper .swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main .swiper .swiper-slide h1 {
+    font-size: 300px;
+}
+
+main .swiper .swiper-slide img {
+    position: absolute;
+    width: 45%;
+    height: auto;
+}
+
+main .butt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    gap: 5px;
+    right: 0%;
+    top: 85%;
+    width: 30%;
+    height: 10vh;
+    font-size: 50px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+main .butt button {
+    font-size: 40px;
+    padding: 7px;
+    border-color: rgb(213, 134, 31);
+    border-radius: 100%;
+}
+
+/* Footer styles */
+footer .idk {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    color: #000;
+    position: absolute;
+    top: 85%;
+    text-align: center;
+}
+
+footer .idk img {
+    margin-left: 40px;
+    position: relative;
+    width: 70px;
+    border-radius: 100%;
+}
+
+/* Animation styles */
+.ani {
+    scale: 0.8;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes grow {
+    0% {
+        scale: 0.5;
+    }
+    100% {
+        scale: 0.8;
+    }
+}
+
+/* Media Queries */
+
+/* Small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        font-size: 20px;
+    }
+
+    header .navi {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    main .swiper {
+        height: 400px;
+    }
+
+    main .swiper .swiper-slide h1 {
+        font-size: 100px;
+    }
+
+    main .swiper .swiper-slide img {
+        width: 70%;
+    }
+
+    footer .idk {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        top: 67%;
+    }
+    .butt{
+        width: 37%;
+        right: 50%;
+        top: 85%;
+    }
+}
+
+/* Medium devices (tablets, 600px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    header {
+        height: 10vh;
+        font-size: 22px;
+    }
+
+    main .swiper {
+        height: 500px;
+    }
+
+    main .swiper .swiper-slide h1 {
+        font-size: 200px;
+    }
+
+    main .swiper .swiper-slide img {
+        width: 60%;
+    }
+
+    footer .idk {
+        height: 8vh;
+        top: 67%;
+    }
+    .butt{
+        width: 37%;
+        right: 50%;
+        top: 85%;
+    }
+}
+
+/* Media query for Samsung Galaxy A51 and A71 */
+@media only screen and (min-device-width: 360px) and (max-device-width: 400px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    header {
+        flex-direction: column;
+        height: auto;
+        font-size: 22px;
+    }
+
+    header .navi {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    header .logo img {
+        width: 40px;
+    }
+
+    main .swiper {
+        height: 450px;
+    }
+
+    main .swiper .swiper-slide h1 {
+        font-size: 120px;
+    }
+
+    main .swiper .swiper-slide img {
+        width: 60%;
+    }
+
+    main .butt {
+        font-size: 40px;
+        width: 20%;
+        top: 80%;
+    }
+
+    footer .idk {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        top: 67%;
+    }
+
+    footer .idk img {
+        width: 50px;
+    }
+    .butt{
+        width: 37%;
+        right: 50%;
+        top: 85%;
+    }
+}
+
+
+/* Large devices (desktops, 900px and up) */
+@media (min-width: 901px) {
+    header {
+        font-size: 25px;
+    }
+
+    main .swiper {
+        width: 1005;
+        height: 500px;
+    }
+
+    main .swiper .swiper-slide h1 {
+        font-size: 300px;
+    }
+
+    main .swiper .swiper-slide img {
+        width: 45%;
+    }
+
+    footer .idk {
+        margin: 0;
+        height: 5vh;
+    }
+}
