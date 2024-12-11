@@ -26,9 +26,9 @@
   });
 
   const imageList = [
-    "/Paintlyfy/assets/p1.png",
-    "/Paintlyfy/assets/p2.png",
-    "/Paintlyfy/assets/p3.png"
+    "/assets/p1.png",
+    "/assets/p2.png",
+    "/assets/p3.png"
   ];
 
   const textList = [
