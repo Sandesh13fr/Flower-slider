@@ -16,10 +16,10 @@
       rel="stylesheet"
     />
     <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
-</head>
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
   <body>
     <header>
       <div class="logo">
@@ -43,30 +43,36 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide ani">
-                <h1>Flower</h1>
-                <img src="/assets/f1v1.png" alt="">
+            <h1>Flower</h1>
+            <img src="/assets/f1v1.png" alt="" />
           </div>
           <div class="swiper-slide ani">
-                <h1>Dahila</h1>
-                <img src="/assets/f2.png" alt="">
+            <h1>Dahila</h1>
+            <img src="/assets/f2.png" alt="" />
           </div>
           <div class="swiper-slide ani">
-                <h1>Rose</h1>
-                <img src="/assets/f3.png" alt="">
+            <h1>Rose</h1>
+            <img src="/assets/f3.png" alt="" />
           </div>
         </div>
       </div>
-      <div class="swiper-button-next"><i class="ri-arrow-left-s-line"></i></button>
-         <button class="swiper-button-prev"><i class="ri-arrow-right-s-line"></i></button>
+      <div class="butt">
+        <button onclick="nextButton">
+          <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <button onclick="prevButton">
+          <i class="ri-arrow-right-s-line"></i>
+        </button>
       </div>
     </main>
     <footer>
-        <div class="idk">
-            <img id="dynamic-image" src="/assets/p1.png" alt="">
-            <h1 id="dynamic-text">Anh Lee</h1>
-        </div>
+      <div class="idk">
+        <img id="dynamic-image" src="/assets/p1.png" alt="" />
+        <h1 id="dynamic-text">Anh Lee</h1>
+      </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/app.js"></script>
+    <script type="module" src="/app.js"></script>
   </body>
 </html>
