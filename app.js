@@ -17,9 +17,9 @@ const swiper = new Swiper(".swiper", {
 
 // Image and text lists for dynamic content
 const imageList = [
-  "/assets/p1.png", // Image for slide 1
-  "/assets/p2.png", // Image for slide 2
-  "/assets/p3.png", // Image for slide 3
+  "https://iili.io/2MVQ8Xf.png", // Image for slide 1
+  "https://iili.io/2MVZN4V.png", // Image for slide 2
+  "https://iili.io/2MVtwts.png", // Image for slide 3
 ];
 
 const textList = [
