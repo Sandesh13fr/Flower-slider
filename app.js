@@ -37,10 +37,11 @@ swiper.on("slideChange", () => {
 updateDynamicContent(swiper.realIndex);
 
 // Button click handlers
-window.prevButton = function () {
-  swiper.slidePrev(200);
-};
-
-window.nextButton = function () {
-  swiper.slideNext(200);
-};
+let per = document.querySelector("#previous")
+let next = document.querySelector("#next")
+per.addEventListener("click", () => {
+  swiper.slidePrev()
+});
+next.addEventListener("click", () => {
+  swiper.slideNext()
+});
