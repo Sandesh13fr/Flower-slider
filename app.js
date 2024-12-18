@@ -47,14 +47,10 @@ swiper.on("slideChange", () => {
 updateDynamicContent(swiper.realIndex);
 
 // Button click handlers
-document
-  .querySelector(".butt button:first-child")
-  .addEventListener("click", () => {
-    swiper.slidePrev(200);
-  });
+window.prevButton = function () {
+  swiper.slidePrev(200);
+};
 
-document
-  .querySelector(".butt button:last-child")
-  .addEventListener("click", () => {
-    swiper.slideNext(200);
-  });
+window.nextButton = function () {
+  swiper.slideNext(200);
+};
