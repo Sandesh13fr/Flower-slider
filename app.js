@@ -1,49 +1,39 @@
 // Initialize Swiper
 const swiper = new Swiper(".swiper", {
   loop: true,
+  slidesPerView: 1,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
   scrollbar: {
     el: ".swiper-scrollbar",
   },
-  slidesPerView: 1,
 });
 
-// Image and text lists for dynamic content
+// Dynamic content lists
 const imageList = [
   "https://iili.io/2MVQ8Xf.png", // Image for slide 1
   "https://iili.io/2MVZN4V.png", // Image for slide 2
   "https://iili.io/2MVtwts.png", // Image for slide 3
 ];
+const textList = ["Anh Lee", "Matvalina", "Megan Ruth"];
 
-const textList = [
-  "Anh Lee", // Text for slide 1
-  "Matvalina", // Text for slide 2
-  "Megan Ruth", // Text for slide 3
-];
-
+// Update dynamic content
 const dynamicImage = document.getElementById("dynamic-image");
 const dynamicText = document.getElementById("dynamic-text");
 
-// Function to update dynamic content
 function updateDynamicContent(index) {
   dynamicImage.src = imageList[index];
   dynamicText.textContent = textList[index];
 }
 
-// Update dynamic content when the slide changes
+// Update content when the slide changes
 swiper.on("slideChange", () => {
-  const activeIndex = swiper.realIndex; // Get the real active slide index
-  updateDynamicContent(activeIndex);
+  updateDynamicContent(swiper.realIndex);
 });
 
-// Initial dynamic content update
+// Initial content update
 updateDynamicContent(swiper.realIndex);
 
 // Button click handlers
